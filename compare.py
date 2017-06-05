@@ -22,29 +22,38 @@ except FileNotFoundError:
     print("Cannot open " + file2)
     exit()
 
+print("Comparing...")
+
 try:
-    hasher1 = hashlib.md5()
-    with open(file1, 'rb') as file1:
-        buf1 = file1.read()
+    hasher1 = hashlib.sha256()
+    with open(file1, 'rb') as filea:
+        buf1 = filea.read()
         hasher1.update(buf1)
-    file1hash = (hasher1.hexdigest())
+        buf1 = None
+        filea.close()
+        file1hash = (hasher1.hexdigest())
 except:
     print("An error occured with the first file.")
     exit()
 
 try:
-    hasher2 = hashlib.md5()
-    with open(file2, 'rb') as file2:
-        buf2 = file2.read()
+    hasher2 = hashlib.sha256()
+    with open(file2, 'rb') as fileb:
+        buf2 = fileb.read()
         hasher2.update(buf2)
-    file2hash = (hasher2.hexdigest())
+        buf2 = None
+        fileb.close()
+        file2hash = (hasher2.hexdigest())
 except:
     print("An error occured with the second file.")
     exit()
 
 if (file1hash == file2hash):
-    print("🗹 Files match.")
+    print("🗹 Files match.\n")
+    print(file1 + ": " + file1hash)
+    print(file2 + ": " + file2hash)
 else:
-    print("🗷 Files do not match.")
-
+    print("🗷 Files do not match.\n")
+    print(file1 + ": " + file1hash)
+    print(file2 + ": " + file2hash)
 exit()

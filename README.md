@@ -1,12 +1,12 @@
-# Compare v1.0.0
+# Compare v1.0.1
 
 [![Source](https://img.shields.io/badge/source-cedwardsmedia/compare-blue.svg?style=flat-square "Source")](https://www.github.com/cedwardsmedia/compare)
-[![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-1.0.1-brightgreen.svg?style=flat-square)]()
 [![License](https://img.shields.io/badge/license-BSD-lightgrey.svg?style=flat-square "License")](./LICENSE.md)
 [![Gratipay](https://img.shields.io/gratipay/cedwardsmedia.svg?style=flat-square "License")](https://gratipay.com/~cedwardsmedia/)
 
 
-_Compare_ is a command-line tool for comparing two files. It compares the MD5 checksum of two files and reports whether the files match or not. I wrote this tool because I got tired of manually checking hashes for files.
+_Compare_ is a command-line tool for comparing two files. It compares the SHA-256 checksum of two files and reports whether the files match or not. I wrote this tool because I got tired of manually checking hashes for files.
 
 ## Installation
 
